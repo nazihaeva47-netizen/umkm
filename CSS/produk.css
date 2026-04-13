@@ -1,0 +1,154 @@
+/* ================= RESET ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9e9f7;
+    overflow-x: hidden;
+}
+
+/* background logo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../Gambar/logo malala.png") no-repeat center;
+    background-size: cover;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -1;
+}
+
+a {
+    color: #dfe6ff;
+    text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6c77b0de;
+    padding: 15px 30px;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    color: #dfe6ff;
+}
+
+/* ================= TITLE ================= */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: serif;
+}
+
+/* ================= PRODUK ================= */
+.produk-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.produk-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background tiap kategori */
+.produk-card:nth-child(1) {
+    background-image: url("../Gambar/gamis1.jpg");
+}
+
+.produk-card:nth-child(2) {
+    background-image: url("../Gambar/baju1.jpg");
+}
+
+.produk-card:nth-child(3) {
+    background-image: url("../Gambar/celana1.jpg");
+}
+
+/* Overlay gelap */
+.produk-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Text */
+.card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Hover efek */
+.produk-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= MODAL ================= */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(27, 169, 224, 0.521);
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}

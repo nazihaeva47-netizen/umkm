@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* BOX PRODUK */
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CARD ITEM */
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* semua isi ke tengah */
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.4s ease-in-out;
+    text-align: center;
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GAMBAR */
+.item img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* NAMA PRODUK */
+.item h4 {
+    margin: 0;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+/* HARGA */
+.item p {
+    margin: 5px 0;
+    color: #666;
+    text-align: center;
+}
+
+/* QTY */
+.qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.qty button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qty button:hover {
+    background: #2980b9;
+}
+
+.qty span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* TOMBOL HAPUS */
+.hapus,
+.hapus-btn {
+    margin-top: 8px;
+    padding: 6px 14px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.hapus:hover,
+.hapus-btn:hover {
+    background: #c0392b;
+}
+
+/* TOTAL */
+#total {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* BUTTON WA */
+.btn-wa {
+    display: block;
+    margin: 30px auto;
+    padding: 16px 30px;
+    font-size: 17px;
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-wa:hover {
+    opacity: 0.9;
+}
